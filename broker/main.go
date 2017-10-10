@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/Sirupsen/logrus"
 	"github.com/codegangsta/cli"
-	"github.com/vamitrou/authz/authz"
-	"github.com/vamitrou/authz/core"
+	"github.com/twistlock/authz/authz"
+	"github.com/twistlock/authz/core"
 	"os"
 )
 
