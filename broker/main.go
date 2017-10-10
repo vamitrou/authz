@@ -20,7 +20,6 @@ const (
 
 const (
 	authorizerBasic = "basic"
-	authorizerGDA   = "gda"
 )
 
 const (
@@ -44,8 +43,6 @@ func main() {
 		switch c.GlobalString(authorizerFlag) {
 		case authorizerBasic:
 			authZHandler = authz.NewBasicAuthZAuthorizer(&authz.BasicAuthorizerSettings{PolicyPath: c.GlobalString(policyFileFlag)})
-		case authorizerGDA:
-			authZHandler = authz.NewGDAAuthZAuthorizer()
 		default:
 			panic(fmt.Sprintf("Unknown authz handler %q", c.GlobalString(authorizerFlag)))
 		}
